@@ -6,11 +6,11 @@
 
 export class TreeHeight {
 	constructor(list) {
-		this.tree = {}; 
-		this.cache = {};
-		this.count = list.length;
-		
-		this.initTree(list);
+        this.tree = {};
+        this.cache = {};
+        this.count = list.length;
+
+        this.initTree(list);
 	}
 
 	initTree(list) {
@@ -21,16 +21,17 @@ export class TreeHeight {
 
 	// the length of way from node to the root
 	traverse(node) {
-		let length = 1;
 
-    while ((node = this.tree[node]) >= 0) {	
-			if (this.cache[node]) {
-				length += this.cache[node];
-				break;
-			} else {
-				++length;
-			}
-		}
+	    let length = 1;
+
+        while ((node = this.tree[node]) >= 0) {
+            if (this.cache[node]) {
+                length += this.cache[node];
+                break;
+            } else {
+                ++length;
+            }
+        }
 
 		return length;
 	}
