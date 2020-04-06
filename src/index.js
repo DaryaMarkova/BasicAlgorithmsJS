@@ -1,8 +1,15 @@
-import { BraceValidation } from "./brace.validation";
-import { TreeHeight } from "../tree.height";
+import { CustomSet } from './customSet';
 
-// const validator = new BraceValidation();
-// validator.run("{{{**[][][]");
+const set = new CustomSet(6);
+set.union(2, 5);
+set.union(2, 1);
+set.union(0, 3);
 
-const tree = new TreeHeight([2,2,3,5,5,7,7,9,9,-1]);
-console.log(tree.maxHeight);
+
+console.log(set.find(4));
+console.log(set.find(2));
+console.log(set.find(5));
+console.log(set.find(1));
+
+console.log(set.find(0));
+console.log(set.find(3));
